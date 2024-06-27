@@ -77,7 +77,7 @@ final class ParticleTypes {
             Class<?> type = this.particle.getDataType();
 
             // Return color for redstone on legacy servers
-            if (type == Void.class && !MODERN && this.particle == Particle.REDSTONE) {
+            if (type == Void.class && !MODERN && this.particle == Particle.DUST) {
                 return Color.class;
             }
 
@@ -127,7 +127,7 @@ final class ParticleTypes {
 
             if (dataType == Void.class) {
                 // Map color to dust options for redstone on legacy servers
-                if (!MODERN && data instanceof Color && this.particle == Particle.REDSTONE) {
+                if (!MODERN && data instanceof Color && this.particle == Particle.DUST) {
                     return data;
                 }
 
